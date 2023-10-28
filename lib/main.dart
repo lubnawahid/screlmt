@@ -1,4 +1,6 @@
 import 'package:flutter/material.dart';
+import 'package:provider/provider.dart';
+import 'package:screlmt/provider/provider.dart';
 import 'package:screlmt/screen/home.dart';
 
 void main() {
@@ -8,13 +10,17 @@ void main() {
 class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
-    return MaterialApp(
+    return ChangeNotifierProvider(
+        create: (context)=> UserProvider(),
+  child: MaterialApp(
+
       title: 'Your App Title',
       theme: ThemeData(
         primarySwatch: Colors.cyan
       ),
-
-      home: HomeScreen(), // Your initial screen
+debugShowCheckedModeBanner: false,
+      home: HomeScreen(),
+  ),// Your initial screen
     );
   }
 }
