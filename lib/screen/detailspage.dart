@@ -116,7 +116,8 @@ class _DetailsPageState extends State<DetailsPage> {
     else{
     return SizedBox.shrink();
     }
-    )
+          },
+      ),
     );
-    }
   }
+}
